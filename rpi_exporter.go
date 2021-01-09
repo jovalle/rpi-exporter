@@ -28,7 +28,7 @@ import (
 	"github.com/prometheus/common/version"
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
 
-	"github.com/lukasmalkmus/rpi_exporter/collector"
+	"github.com/jovalle/rpi-exporter/collector"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -74,12 +74,12 @@ func main() {
 
 	// Setup the command line flags and commands.
 	log.AddFlags(kingpin.CommandLine)
-	kingpin.Version(version.Print("rpi_exporter"))
+	kingpin.Version(version.Print("rpi-exporter"))
 	kingpin.HelpFlag.Short('h')
 	kingpin.Parse()
 
 	// Print build context and version.
-	log.Info("Starting rpi_exporter", version.Info())
+	log.Info("Starting rpi-exporter", version.Info())
 	log.Info("Build context", version.BuildContext())
 
 	// Setup router and handlers.

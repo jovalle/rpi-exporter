@@ -31,13 +31,13 @@ const defaultEnabled = true
 var (
 	scrapeDurationDesc = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, "scrape", "collector_duration_seconds"),
-		"rpi_exporter: Duration of a collector scrape.",
+		"rpi-exporter: Duration of a collector scrape.",
 		[]string{"collector"},
 		nil,
 	)
 	scrapeSuccessDesc = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, "scrape", "collector_success"),
-		"rpi_exporter: Whether a collector succeeded.",
+		"rpi-exporter: Whether a collector succeeded.",
 		[]string{"collector"},
 		nil,
 	)

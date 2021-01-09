@@ -1,1 +1,1 @@
-* Lukas Malkmus <mail@lukasmalkmus.com>
+* Jay Ovalle <jay.ovalle@gmail.com>

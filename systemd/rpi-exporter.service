@@ -1,12 +1,12 @@
 [Unit]
 Description=Prometheus exporter for RPi temperature metrics
-Documentation=https://github.com/lukasmalkmus/rpi_exporter
+Documentation=https://github.com/jovalle/rpi-exporter
 
 [Service]
 Restart=always
 # prometheus user should be part of "video" group to get GPU temperature
 User=prometheus
-ExecStart=/usr/local/bin/rpi_exporter
+ExecStart=/usr/local/bin/rpi-exporter
 TimeoutStopSec=20s
 SendSIGKILL=no
 

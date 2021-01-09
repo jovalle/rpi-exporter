@@ -1,7 +1,7 @@
 go:
     version: 1.13
 repository:
-    path: github.com/lukasmalkmus/rpi_exporter
+    path: github.com/jovalle/rpi-exporter
 build:
     flags: -mod=vendor -buildmode=exe -tags=netgo -installsuffix=cgo -trimpath
     ldflags: |
@@ -17,7 +17,7 @@ tarball:
     files:
         - LICENSE
         - NOTICE
-        - systemd/rpi_exporter.service
+        - systemd/rpi-exporter.service
 crossbuild:
     platforms:
         - linux/arm

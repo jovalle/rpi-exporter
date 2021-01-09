@@ -1,4 +1,4 @@
-module github.com/lukasmalkmus/rpi_exporter
+module github.com/jovalle/rpi-exporter
 
 go 1.13
 

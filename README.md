@@ -1,6 +1,6 @@
-# lukasmalkmus/rpi_exporter
+# rpi-exporter
 
-> A Raspberry Pi CPU temperature exporter. - by **[Lukas Malkmus]**
+> A Raspberry Pi CPU temperature exporter
 
 [![Travis Status][travis_badge]][travis]
 [![Go Report][report_badge]][report]
@@ -19,17 +19,17 @@
 
 ### Introduction
 
-The *rpi_exporter* is a simple server that scrapes the Raspberry Pi's CPU
+The *rpi-exporter* is a simple server that scrapes the Raspberry Pi's CPU
 temperature and exports it via HTTP for Prometheus consumption.
 
 ### Usage
 
 #### Installation
 
-The easiest way to run the *rpi_exporter* is by grabbing the latest binary from
+The easiest way to run the *rpi-exporter* is by grabbing the latest binary from
 the [release page][release].
 
-Do not forget to run *rpi_exporter* using user in `video` group to get GPU
+Do not forget to run *rpi-exporter* using user in `video` group to get GPU
 details from RPi.
 
 ##### Building from source
@@ -37,21 +37,21 @@ details from RPi.
 This project uses [go mod] for vendoring.
 
 ```bash
-git clone https://github.com/lukasmalkmus/rpi_exporter.git
-cd rpi_exporter
+git clone https://github.com/jovalle/rpi-exporter.git
+cd rpi-exporter
 make build
 ```
 
 #### Using the application
 
 ```bash
-./rpi_exporter [flags]
+./rpi-exporter [flags]
 ```
 
 Help on flags:
 
 ```bash
-./rpi_exporter --help
+./rpi-exporter --help
 ```
 
 #### Docker images
@@ -78,12 +78,12 @@ See [LICENSE](LICENSE) for more information.
 [DockerHub]: https://hub.docker.com/r/carlosedp/arm_exporter
 
 <!-- Badges -->
-[travis]: https://travis-ci.com/lukasmalkmus/rpi_exporter
-[travis_badge]: https://travis-ci.com/lukasmalkmus/rpi_exporter.svg
-[report]: https://goreportcard.com/report/github.com/lukasmalkmus/rpi_exporter
-[report_badge]: https://goreportcard.com/badge/github.com/lukasmalkmus/rpi_exporter
-[release]: https://github.com/lukasmalkmus/rpi_exporter/releases
-[release_badge]: https://img.shields.io/github/release/lukasmalkmus/rpi_exporter.svg
+[travis]: https://travis-ci.com/lukasmalkmus/rpi-exporter
+[travis_badge]: https://travis-ci.com/lukasmalkmus/rpi-exporter.svg
+[report]: https://goreportcard.com/report/github.com/lukasmalkmus/rpi-exporter
+[report_badge]: https://goreportcard.com/badge/github.com/lukasmalkmus/rpi-exporter
+[release]: https://github.com/lukasmalkmus/rpi-exporter/releases
+[release_badge]: https://img.shields.io/github/release/lukasmalkmus/rpi-exporter.svg
 [license]: https://opensource.org/licenses/Apache-2.0
 [license_badge]: https://img.shields.io/badge/license-Apache-blue.svg
 [docker]: https://hub.docker.com/r/carlosedp/arm_exporter
