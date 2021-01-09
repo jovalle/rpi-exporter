@@ -14,6 +14,7 @@
 package collector
 
 import (
+	"os"
 	"os/exec"
 	"strconv"
 	"strings"
@@ -36,9 +37,13 @@ func NewGPUCollector() (Collector, error) {
 
 // Update implements the Collector interface.
 func (c *gpuCollector) Update(ch chan<- prometheus.Metric) error {
+	vcgencmdPath := "/usr/bin/vcgencmd"
+	if value, ok := os.LookupEnv("RPI_EXPORTER_VCGENCMD_PATH"); ok {
+		vcgencmdPath = value
+	}
 	// Get temperature string by executing /opt/vc/bin/vcgencmd measure_temp
 	// and convert it to float64 value.
-	cmd := exec.Command("/opt/vc/bin/vcgencmd", "measure_temp")
+	cmd := exec.Command(vcgencmdPath, "measure_temp")
 	stdout, err := cmd.Output()
 	if err != nil {
 		return err
